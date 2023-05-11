@@ -5,7 +5,7 @@
     "description": "Contact API",
     "version": "1.0.0"
   },
-  "host": "https://nodethistime.onrender.com",
+  "host": "nodethistime.onrender.com",
   "basePath": "/",
   "schemes": ["https"],
   "paths": {
