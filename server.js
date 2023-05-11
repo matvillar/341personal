@@ -3,11 +3,21 @@ const app = express();
 const bodyParser = require('body-parser');
 const env = require('dotenv').config();
 const mongoose = require('mongoose');
-const cors = require('cors');
+// const cors = require('cors');
 
-app.use(cors());
-
-app.use(bodyParser.json());
+app.use(bodyParser.json()).use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
+  );
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET, POST, PUT, DELETE, OPTIONS'
+  );
+  next();
+});
 
 app.use('/', require('./routes/index.js'));
 
