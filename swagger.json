@@ -38,7 +38,7 @@
                 "favoriteColor": {
                   "example": "any"
                 },
-                "birthdate": {
+                "birthday": {
                   "example": "any"
                 }
               }
@@ -117,7 +117,7 @@
                 "favoriteColor": {
                   "example": "any"
                 },
-                "birthdate": {
+                "birthday": {
                   "example": "any"
                 }
               }

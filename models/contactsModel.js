@@ -8,7 +8,7 @@ const contactSchema = mongoose.Schema(
       type: String,
       required: [true, 'Favorite color is required'],
     },
-    birthdate: { type: String },
+    birthday: { type: String },
   },
   {
     timestamps: true,
