@@ -7,7 +7,7 @@
   },
   "host": "nodethistime.onrender.com",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": ["https"],
   "paths": {
     "/api-docs": {
       "get": {
