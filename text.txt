@@ -1,0 +1,7 @@
+{
+	"firstName": "Matias",
+	"lastName": "Villar",
+	"email": "matiase.villar@gmail.com",
+	"favoriteColor": "Blue",
+	"birthdate": "1994-03-29"
+}
