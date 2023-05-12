@@ -2,24 +2,24 @@ GET http://localhost:3000/contacts HTTP/1.1
 
 ###
 # GET /contacts/:id
-GET http://localhost:3000/contact/64487463ebeca1f2559b5893 HTTP/1.1
+GET http://localhost:3000/contacts/645d4a3f121b39d3007fabfc HTTP/1.1
 
 ###
 #  This contact does not exist yet, click send request to see if it gets created
-POST http://localhost:3000/contact HTTP/1.1
+POST http://localhost:3000/contacts HTTP/1.1
 Content-Type: application/json
 
 {
-  "firstName": "Ivan",
-  "lastName": "Saavedra",
+  "firstName": "Matias",
+  "lastName": "Villar",
   "email": "ivan@gmail.com",
   "favoriteColor": "Red",
-  "birthdate": "1964-07-19"
+  "birthday": "1964-07-19"
 }
 
 ###
 
-PUT http://localhost:3000/contact/644874f5ebeca1f2559b5897 HTTP/1.1
+PUT http://localhost:3000/contacts/644874f5ebeca1f2559b5897 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -28,5 +28,5 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/contact/64487463ebeca1f2559b5893 HTTP/1.1
+DELETE http://localhost:3000/contacts/64487463ebeca1f2559b5893 HTTP/1.1
 

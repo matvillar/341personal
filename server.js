@@ -3,29 +3,19 @@ const app = express();
 const bodyParser = require('body-parser');
 const env = require('dotenv').config();
 const mongoose = require('mongoose');
-// const cors = require('cors');
+const cors = require('cors');
 
-app.use(bodyParser.json()).use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
-  );
-  res.setHeader('Content-Type', 'application/json');
-  res.setHeader(
-    'Access-Control-Allow-Methods',
-    'GET, POST, PUT, DELETE, OPTIONS'
-  );
-  next();
-});
-
+//Body parser order is 100% important
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true })); // Move this line above the routes
+app.use(cors());
 app.use('/', require('./routes/index.js'));
 
 /* ***********************
  * Local Server Information
  * Values from .env (environment) file
  *************************/
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const host = process.env.HOST;
 const mongdb = process.env.MONGO_URI;
 
